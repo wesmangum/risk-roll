@@ -1,0 +1,5 @@
+<label># of dice:</label>
+{{view Ember.TextField value=selected type="number"}}
+<button {{action "rollDice"}}>Roll!</button>
+
+{{render 'dice' rolls}}
