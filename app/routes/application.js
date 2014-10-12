@@ -1,4 +1,4 @@
-import EMber from 'ember';
+import Ember from 'ember';
 
 import settings from 'risk-roll/json/settings';
 
