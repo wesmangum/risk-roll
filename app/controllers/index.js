@@ -1,21 +1,17 @@
 import Ember from 'ember';
+import Users from 'risk-roll/json/users';
 
 export default Ember.Controller.extend({
   actions: {
-    setDie: function(value) {
-      this.set('selected', value);
-    },
-    rollDice: function() {
-      var sel = this.get('selected');
+    rollDice: function(user) {
+      var sel = user.selected;
       var num = [];
       for (var i = 1; i <= sel; i++) {
         num.push((Math.round(Math.random() * 5)) + 1);
       }
-      this.set('rolls', num);
-      console.log(this.get('rolls'));
+      user.set('rolls', num);
+      console.log(user.rolls);
     }
   },
-  dice: [1, 2, 3],
-  rolls: [],
-  selected: 1
+  users: Users
 });

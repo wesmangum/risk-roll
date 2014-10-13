@@ -1,0 +1,8 @@
+<div class="user">
+  <h2>{{this.title}}</h2>
+  <label># of dice:</label>
+  {{view Ember.TextField value=this.selected type="number" min=1}}
+  <button {{action "rollDice" this}}>Roll!</button>
+  {{this.selected}}
+  {{render 'dice' this.rolls}}
+</div>

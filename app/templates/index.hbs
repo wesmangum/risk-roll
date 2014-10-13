@@ -1,5 +1,3 @@
-<label># of dice:</label>
-{{view Ember.TextField value=selected type="number" min=1}}
-<button {{action "rollDice"}}>Roll!</button>
-
-{{render 'dice' rolls}}
+{{#each user in users}}
+  {{render 'user' user}}
+{{/each}}
